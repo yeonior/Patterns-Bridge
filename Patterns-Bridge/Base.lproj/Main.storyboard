@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5p-4m-CMV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5p-4m-CMV" customClass="DayPickerView" customModule="Patterns_Bridge" customModuleProvider="target">
                                 <rect key="frame" x="40" y="84" width="334" height="41"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -32,6 +32,9 @@
                             <constraint firstItem="E5p-4m-CMV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="vzl-s2-Qw8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dayPicker" destination="E5p-4m-CMV" id="oXF-6a-0ox"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
