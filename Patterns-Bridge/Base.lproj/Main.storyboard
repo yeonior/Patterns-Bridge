@@ -17,19 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5p-4m-CMV" customClass="DayPickerView" customModule="Patterns_Bridge" customModuleProvider="target">
-                                <rect key="frame" x="40" y="84" width="334" height="41"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="40" y="781" width="334" height="41"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="zvl-b0-iyu"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Bsw-bE-1Or">
+                                <rect key="frame" x="87" y="327.5" width="240" height="240.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="GFb-k5-bCR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn5-tu-nJw">
+                                <rect key="frame" x="139.5" y="144" width="135" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="E5p-4m-CMV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="0WG-Ij-i7R"/>
+                            <constraint firstItem="tn5-tu-nJw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Hp0-3F-0vV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bsw-bE-1Or" secondAttribute="trailing" constant="87" id="a6j-ux-PVD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E5p-4m-CMV" secondAttribute="trailing" constant="40" id="adW-4x-aYO"/>
+                            <constraint firstItem="tn5-tu-nJw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="alQ-jj-LGi"/>
+                            <constraint firstItem="Bsw-bE-1Or" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="rvQ-7e-OEj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E5p-4m-CMV" secondAttribute="bottom" constant="40" id="rwh-Bg-OhJ"/>
                             <constraint firstItem="E5p-4m-CMV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="vzl-s2-Qw8"/>
+                            <constraint firstItem="Bsw-bE-1Or" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y5p-66-s7h"/>
                         </constraints>
                     </view>
                     <connections>
@@ -42,8 +59,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
