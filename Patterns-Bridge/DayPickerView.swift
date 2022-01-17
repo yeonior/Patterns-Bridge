@@ -40,20 +40,28 @@ class DayPickerView: UIControl {
             button.setTitleColor(.lightGray, for: .normal)
             button.setTitleColor(.white, for: .selected)
             button.addTarget(self, action: #selector(buttonDidSelected), for: .touchUpInside)
+            buttons.append(button)
+            self.addSubview(button)
         }
         
         stackView = UIStackView(arrangedSubviews: buttons)
         
         self.addSubview(stackView)
         
-        stackView.spacing = 8
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.distribution = .fillEqually
+        stackView.backgroundColor = .systemGray6
+        stackView.layer.cornerRadius = 15
     }
     
     @objc
     func buttonDidSelected(sender: UIButton) {
-        print(#function)
+        for button in buttons {
+            button.isSelected = false
+        }
+        let index = sender.tag
+        let button = buttons[index]
+        button.isSelected = true
     }
 }
